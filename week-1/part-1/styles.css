@@ -3,8 +3,8 @@ html, body {
   padding: 10;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  line-height: 1.8;
-  letter-spacing: 0.01em;
+  line-height: 1.6;
+  background-color: #111111;
 
 }
 
@@ -22,7 +22,15 @@ html, body {
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+.column-2 {
+  float: left;
+  width: 50%;
+  padding: 30px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Create three equal columns that floats next to each other */
+.column-3 {
   float: left;
   width: 33.33%;
   padding: 30px;
@@ -44,7 +52,10 @@ html, body {
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  .column {
+  .column-2 {
+    width: 100%;
+  }
+  .column-3 {
     width: 100%;
   }
 }
@@ -85,15 +96,20 @@ h6 {
 
   font-style: Thin;
   font-size: 12px;
-  color: grey;
   padding-bottom: 15px;
   line-height: 0.3;
 }
 p {
   font-style: Thin;
-  font-size: 14px;
-  padding-bottom: 15px;
-  line-height: 1.8;
+  letter-spacing: 0.015em;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+div > p:first-child{
+    margin-top:-.5em;
+}
+div > p:last-child{
+    margin-bottom:-.5em;
 }
 a {
   color: grey;
