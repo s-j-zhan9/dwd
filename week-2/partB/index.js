@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
     });
   });
 
-app.get('/result', function(req, res){
+app.post('/result', function(req, res){
     var bandName = req.query.band
     console.log(req.query.band)
     var x = Math.floor(Math.random() * 3);
